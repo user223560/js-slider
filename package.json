@@ -3,5 +3,13 @@
   "description": "JavaScript Image Carousel",
   "author": "https://github.com/user223560",
   "version": "1.0.0",
-  "license": "MIT"
+  "license": "ISC",
+  "scripts": {
+    "start": "rm -rf .parcel-cache && parcel index.html",
+    "build": "rm -rf .parcel-cache && parcel build index.html"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.12.0",
+    "parcel": "^2.12.0"
+  }
 }

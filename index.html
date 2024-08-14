@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Yeseva+One&display=swap" rel="stylesheet">
+    <!-- Source: https://caniuse.com/?search=script%20defer -->
+    <script defer type="module" src="/src/scripts/main.js"></script> 
+    <title>JavaScript Slider</title>
+</head>
+<body>
+    <main class="layout flex container">
+        <section class="details">
+            <h1 class="details__h1">Completed projects</h1>
+            <div class="details__content">
+                <p class="details__main-description">
+                    Only a small part of the work performed by our company is presented on the site.
+                    For 14 years on in the construction<br>market we have made happy more than 1000 families
+                </p>
+                <div class="details__grid">
+                    <div class="details__grid-item">
+                        <h3 class="details__h3">City:</h3>
+                        <p class="details__description">Rostov-on-Don<br>LCD admiral</p>
+                    </div>
+                    <div class="details__grid-item">
+                        <h3 class="details__h3">apartment area:</h3>
+                        <p class="details__description">81 m2</p>
+                    </div>
+                    <div class="details__grid-item">
+                        <h3 class="details__h3">Repair time:</h3>
+                        <p class="details__description">3.5 months</p>
+                    </div>
+                    <div class="details__grid-item">
+                        <h3 class="details__h3">Repair Cost:</h3>
+                        <p class="details__description">Upon request</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-options">
+                <div class="slider-options__arrow slider-options__arrow--prev"></div>
+                <div class="slider-options__dots-wrapper">
+                    <span class="slider-options__dot slider-options__dot--current"></span>
+                    <span class="slider-options__dot"></span>
+                    <span class="slider-options__dot"></span>
+                </div>
+                <div class="slider-options__arrow slider-options__arrow--next"></div>
+            </div>
+        </section>
+        <section class="overview">
+            <div class="overview__caption-flex">
+                <div class="overview__caption overview__caption--current">
+                    <h5 class="overview__h5">Rostov-on-Don, Admiral</h5>
+                </div>
+                <div class="overview__caption">
+                    <h5 class="overview__h5">Sochi Thieves</h5>
+                </div>
+                <div class="overview__caption">
+                    <h5 class="overview__h5">Rostov-on-Don Patriotic</h5>
+                </div>
+            </div>
+            <div class="overview__images-container">
+                <img
+                class="overview__image"
+                src="/src/images/png/first-image.png"
+                alt="Rostov-on-Don, Admiral"
+                >
+            </div>
+        </section>
+    </main>
+</body>
+</html>

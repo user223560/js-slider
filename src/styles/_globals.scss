@@ -1,0 +1,29 @@
+@import "functions";
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-yeseva-one);
+    color: var(--main-heading-color);
+    text-transform: uppercase;
+}
+
+p {
+    font-family: var(--font-nunito-sans);;
+    color: var(--main-text-color);
+}
+
+.layout {
+    height: 100%;
+    padding-top: rem(107);
+    padding-bottom: rem(124);
+    background-color: var(--main-bg-color);
+}
+
+.container {
+    padding-right: rem(134);
+    padding-left: rem(134);
+}
+
+.flex {
+    display: flex;
+    gap: rem(50);
+}

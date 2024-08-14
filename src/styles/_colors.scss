@@ -1,0 +1,15 @@
+// Using Sass variables
+
+// $bg-black: #131313;
+// $heading-color: #E3B873;
+// $white: #FFFFFF;
+
+// Using CSS custom properties (variables)
+
+// Global referencing by using :root pseudo-class
+:root {
+    --main-bg-color: hsl(0, 0%, 7%);
+    --main-heading-color: hsl(37, 67%, 67%);
+    --main-text-color: hsl(0, 0%, 100%);
+    --main-color-inactive: hsl(0, 0%, 30%);
+}

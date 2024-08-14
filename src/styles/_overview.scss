@@ -1,0 +1,43 @@
+@import "functions";
+
+.overview {
+
+    &__caption-flex {
+        display: flex;
+        margin-bottom: rem(45);
+        gap: rem(60);
+    }
+
+    &__caption {
+        padding-bottom: rem(7);
+        border-bottom: 1px solid var(--main-bg-color);
+        color: var(--main-color-inactive);
+        cursor: pointer;
+        transition: all 200ms ease;
+
+        &:hover {
+            border-bottom: 1px solid var(--main-heading-color);
+            color: var(--main-heading-color);
+        }
+    }
+
+    &__caption--current {
+        border-bottom: 1px solid var(--main-heading-color);
+        color: var(--main-heading-color);
+    }
+
+    &__h5 {
+        font-size: rem(14);
+        line-height: 138.6%;
+        color: inherit;
+    }
+
+    &__images-container {
+        width: rem(679);
+        height: rem(482);
+    }
+
+    &__image {
+        object-fit: cover;
+    }
+}
