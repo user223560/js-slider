@@ -191,4 +191,8 @@ p {
 .overview__image {
   object-fit: cover;
 }
+
+.overview__image:not(:first-child) {
+  display: none;
+}
 /*# sourceMappingURL=index.c41b5a0e.css.map */
