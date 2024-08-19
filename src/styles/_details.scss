@@ -32,10 +32,6 @@
         &:not(:first-child) {
             display: none;
         }
-
-        // &:nth-child(2) {
-        //     margin-bottom: rem(124);
-        // }
     }
 
     &__h3 {
@@ -65,7 +61,12 @@
     }
 
     &__arrow--prev {
-        background-image: url("/src/images/svg/arrow-left.svg");
+        background-image: url("/src/images/svg/arrow-left-inactive.svg");
+        transition: background-image 200ms ease;
+
+        &:hover {
+            background-image: url("/src/images/svg/arrow-left.svg");
+        }
     }
 
     &__dots-wrapper {
@@ -88,6 +89,11 @@
     }
 
     &__arrow--next {
-        background-image: url("/src/images/svg/arrow-right.svg");
+        background-image: url("/src/images/svg/arrow-right-inactive.svg");
+        transition: background-image 200ms ease;
+
+        &:hover {
+            background-image: url("/src/images/svg/arrow-right.svg");
+        }
     }
 }

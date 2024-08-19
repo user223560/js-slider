@@ -590,19 +590,22 @@ var _mainScss = require("../styles/main.scss");
 // const caption = document.querySelectorAll(".overview__caption")
 const dotsWrapper = document.querySelector(".slider-options__dots-wrapper");
 const dots = Array.from(dotsWrapper.children);
-const currentDot = dotsWrapper.querySelector(".slider-options__dot--current");
+// const currentDot = dotsWrapper.querySelector(".slider-options__dot--current")
 const imagesContainer = document.querySelector(".overview__images-container");
 const slides = Array.from(imagesContainer.children);
-const currentSlide = imagesContainer.querySelector(".overview__image--current");
+// const currentSlide = imagesContainer.querySelector(".overview__image--current")
 const captionFlex = document.querySelector(".overview__caption-flex");
 const captions = Array.from(captionFlex.children);
-const currentCaption = captionFlex.querySelector(".overview__caption--current");
-const GridWrapper = document.querySelector(".details__grid-wrapper");
-const grids = Array.from(GridWrapper.children);
-const currentGrid = GridWrapper.querySelector(".details__grid--current");
+// const currentCaption = captionFlex.querySelector(".overview__caption--current")
+const gridWrapper = document.querySelector(".details__grid-wrapper");
+const grids = Array.from(gridWrapper.children);
+// const currentGrid = GridWrapper.querySelector(".details__grid--current")
 const prevBtn = document.querySelector(".slider-options__arrow--prev");
 const nextBtn = document.querySelector(".slider-options__arrow--next");
 let slideIndex = 0;
+let gridIndex = 0;
+let dotIndex = 0;
+let captionIndex = 0;
 function showSlide(index) {
     if (index >= slides.length) slideIndex = 0;
     else if (index < 0) slideIndex = slides.length - 1;
@@ -611,19 +614,55 @@ function showSlide(index) {
     });
     slides[slideIndex].style.display = "block";
 }
-function prevSlide() {
+function showGrid(index) {
+    if (index >= grids.length) gridIndex = 0;
+    else if (index < 0) gridIndex = grids.length - 1;
+    grids.forEach((grid)=>{
+        grid.style.display = "none";
+    });
+    grids[gridIndex].style.display = "grid";
+}
+function showDots(index) {
+    if (index >= dots.length) dotIndex = 0;
+    else if (index < 0) dotIndex = dots.length - 1;
+    dots.forEach((dot)=>{
+        dot.classList.remove("slider-options__dot--current");
+    });
+    dots[dotIndex].classList.add("slider-options__dot--current");
+}
+function showCaptions(index) {
+    if (index >= captions.length) captionIndex = 0;
+    else if (index < 0) captionIndex = captions.length - 1;
+    captions.forEach((caption)=>{
+        caption.classList.remove("overview__caption--current");
+    });
+    captions[captionIndex].classList.add("overview__caption--current");
+}
+function prevItem() {
     slideIndex--;
     showSlide(slideIndex);
+    gridIndex--;
+    showGrid(gridIndex);
+    dotIndex--;
+    showDots(dotIndex);
+    captionIndex--;
+    showCaptions(captionIndex);
 }
-function nextSlide() {
+function nextItem() {
     slideIndex++;
     showSlide(slideIndex);
+    gridIndex++;
+    showGrid(gridIndex);
+    dotIndex++;
+    showDots(dotIndex);
+    captionIndex++;
+    showCaptions(captionIndex);
 }
 prevBtn.addEventListener("click", ()=>{
-    prevSlide();
+    prevItem();
 });
 nextBtn.addEventListener("click", ()=>{
-    nextSlide();
+    nextItem();
 });
 dots[1].addEventListener("click", ()=>{
     dots[0].classList.remove("slider-options__dot--current");

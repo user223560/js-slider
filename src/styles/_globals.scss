@@ -1,4 +1,5 @@
 @import "functions";
+@import "breakpoints";
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-yeseva-one);
@@ -21,9 +22,18 @@ p {
 .container {
     padding-right: rem(134);
     padding-left: rem(134);
+
+    @include breakpoint-up(desktop) {
+        padding-right: rem(350);
+        padding-left: rem(350);
+    }
 }
 
 .flex {
     display: flex;
     gap: rem(50);
+
+    @include breakpoint-up(desktop) {
+        justify-content: space-between;
+    }
 }
