@@ -3,7 +3,7 @@
 #### Макет находится здесь:
 https://www.figma.com/file/D4rkmpfIjEC3GwYBPgE1vd/Slider
 
-#### Запуск проекта:
+#### Запуск проекта (порт 3000):
 yarn start
 
 ## Особенности
