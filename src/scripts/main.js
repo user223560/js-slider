@@ -1,24 +1,17 @@
 import "../styles/main.scss"
 
-// const dots = document.querySelectorAll(".slider-options__dot")
-// const slides = document.querySelectorAll(".overview__image")
-// const caption = document.querySelectorAll(".overview__caption")
 
 const dotsWrapper = document.querySelector(".slider-options__dots-wrapper")
 const dots = Array.from(dotsWrapper.children)
-// const currentDot = dotsWrapper.querySelector(".slider-options__dot--current")
 
 const imagesContainer = document.querySelector(".overview__images-container")
 const slides = Array.from(imagesContainer.children)
-// const currentSlide = imagesContainer.querySelector(".overview__image--current")
 
 const captionFlex = document.querySelector(".overview__caption-flex")
 const captions = Array.from(captionFlex.children)
-// const currentCaption = captionFlex.querySelector(".overview__caption--current")
 
 const gridWrapper = document.querySelector(".details__grid-wrapper")
 const grids = Array.from(gridWrapper.children)
-// const currentGrid = GridWrapper.querySelector(".details__grid--current")
 
 const prevBtn = document.querySelector(".slider-options__arrow--prev")
 const nextBtn = document.querySelector(".slider-options__arrow--next")
